@@ -33,7 +33,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="hello-elementor-theme-style-css" href="/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.4" media="all">
 <link rel="stylesheet" id="hello-elementor-header-footer-css" href="/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.4" media="all">
 <link rel="stylesheet" id="elementor-frontend-css" href="/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.31.1" media="all">
-<link rel="stylesheet" id="elementor-post-13-css" href="/wp-content/uploads/elementor/css/post-13.css?ver=1754994632" media="all">
+<link rel="stylesheet" id="elementor-post-13-css" href="/wp-content/uploads/elementor/css/post-13.css?ver=1755274123" media="all">
 <link rel="stylesheet" id="widget-image-css" href="/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.31.1" media="all">
 <link rel="stylesheet" id="widget-social-icons-css" href="/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.31.1" media="all">
 <link rel="stylesheet" id="e-apple-webkit-css" href="/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.31.1" media="all">
@@ -41,7 +41,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="stylesheet" id="e-animation-fadeIn-css" href="/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.31.1" media="all">
 <link rel="stylesheet" id="widget-image-box-css" href="/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.31.1" media="all">
 <link rel="stylesheet" id="widget-icon-list-css" href="/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.31.1" media="all">
-<link rel="stylesheet" id="elementor-post-14-css" href="/wp-content/uploads/elementor/css/post-14.css?ver=1755156899" media="all">
+<link rel="stylesheet" id="elementor-post-14-css" href="/wp-content/uploads/elementor/css/post-14.css?ver=1755275014" media="all">
 <link rel="stylesheet" id="orbisius_ct_hello_elementor_child_theme_parent_style-css" href="/wp-content/themes/hello-elementor/style.css?ver=1754659913" media="all">
 <link rel="stylesheet" id="orbisius_ct_hello_elementor_child_theme_parent_style_child_style-css" href="/wp-content/themes/hello-elementor-child-theme/style.css?ver=1754660106" media="all">
 <link rel="stylesheet" id="ekit-widget-styles-css" href="/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.6.0" media="all">
@@ -57,6 +57,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <link rel="shortlink" href="/">
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2F">
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2F&amp;format=xml">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 <meta name="generator" content="Elementor 3.31.1; features: e_font_icon_svg, additional_custom_breakpoints, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
 			<style>
 				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
@@ -112,12 +116,53 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
     z-index: 4;
 }
 }
+@media (max-width: 767px) {
+  .card-choose-main {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+		 display: flex;
+  gap: 20px;
+  }
+
+  .card-choose-main > .elementor-widget-image-box {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    min-width: 260px;
+  }
+
+  /* Hide scrollbar for mobile aesthetics */
+  .card-choose-main::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media(max-width: 767px){
 
      .sticky-for-mobile {
     position: sticky;
     top: 0;
 			 Z-index: -1;
+}
+	.card-choose-main li.slick-active {
+    background: #fe5c90;
+}
+.card-choose-main li {
+    background: #bfbfbf;
+    display: inline-block;
+    border-radius: 50px;
+    width: 8px;
+    height: 8px;
+}
+	.card-choose-main li button{
+		display: none;
+	}
+.card-choose-main .slick-dots {
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+.card-choose-main .elementor-image-box-wrapper {
+    text-align: center !important;
 }
 }		</style>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"></head>
@@ -201,7 +246,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		<div class="elementor-element elementor-element-75b1bcc e-con-full e-flex e-con e-child" data-id="75b1bcc" data-element_type="container">
 				<div class="elementor-element elementor-element-590106e elementor-widget elementor-widget-heading" data-id="590106e" data-element_type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default">Why Choose Us?</h2>				</div>
-		<div class="elementor-element elementor-element-a5fdf7b e-grid e-con-full e-con e-child" data-id="a5fdf7b" data-element_type="container">
+		<div class="elementor-element elementor-element-a5fdf7b e-grid e-con-full card-choose-main e-con e-child" data-id="a5fdf7b" data-element_type="container">
 				<div class="elementor-element elementor-element-ccc7046 versatile-heading elementor-position-top elementor-widget elementor-widget-image-box" data-id="ccc7046" data-element_type="widget" data-widget_type="image-box.default">
 					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="128" height="128" src="/wp-content/uploads/2025/08/digital-ecosystem-1.png" class="attachment-full size-full wp-image-1150" alt=""></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Versatile Digital Ecosystem</h3><p class="elementor-image-box-description">From mobile tools for daily utility to expert-driven web resources for entertainment choices, we cover a broad spectrum of digital needs.</p></div></div>				</div>
 				<div class="elementor-element elementor-element-28f90fd versatile-heading elementor-position-top elementor-widget elementor-widget-image-box" data-id="28f90fd" data-element_type="widget" data-widget_type="image-box.default">
@@ -300,6 +345,37 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		<script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/vortex\/*"},{"not":{"href_matches":["\/vortex\/wp-*.php","\/vortex\/wp-admin\/*","\/vortex\/wp-content\/uploads\/*","\/vortex\/wp-content\/*","\/vortex\/wp-content\/plugins\/*","\/vortex\/wp-content\/themes\/hello-elementor-child-theme\/*","\/vortex\/wp-content\/themes\/hello-elementor\/*","\/vortex\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+  function initMobileSlider() {
+    if ($(window).width() < 768) {
+      if (!$('.card-choose-main').hasClass('slick-initialized')) {
+        $('.card-choose-main').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+  
+       
+        });
+      }
+    } else {
+      if ($('.card-choose-main').hasClass('slick-initialized')) {
+        $('.card-choose-main').slick('unslick');
+      }
+    }
+  }
+
+  // Init on load
+  initMobileSlider();
+
+  // Re-init on resize
+  $(window).on('resize', function() {
+    initMobileSlider();
+  });
+});
+</script>
 			<script>
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
@@ -341,12 +417,12 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 <script src="/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.31.1" id="elementor-frontend-modules-js"></script>
 <script src="/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.31.1","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"hello-theme-header-footer":true,"nested-elements":true,"e_element_cache":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"\/wp-admin\/admin-ajax.php","uploadUrl":"\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"8530d6dcf5"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":14,"title":"Votex%20Lab","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.31.1","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"hello-theme-header-footer":true,"nested-elements":true,"e_element_cache":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"\/wp-admin\/admin-ajax.php","uploadUrl":"\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"bf989a3f7a"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":14,"title":"Votex%20Lab","excerpt":"","featuredImage":false}};
 </script>
 <script src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.31.1" id="elementor-frontend-js"></script>
 <script src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.6.0" id="animate-circle-js"></script>
 <script id="elementskit-elementor-js-extra">
-var ekit_config = {"ajaxurl":"\/wp-admin\/admin-ajax.php","nonce":"399d9ae0f3"};
+var ekit_config = {"ajaxurl":"\/wp-admin\/admin-ajax.php","nonce":"cb633f8d08"};
 </script>
 <script src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.6.0" id="elementskit-elementor-js"></script>
 	</body>
